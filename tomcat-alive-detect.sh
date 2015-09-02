@@ -19,15 +19,4 @@ else
   #run command when failed
 fi
 
-done
-~
-~
-~
-~
-~
-~
-~
-~
-~
-~
-"/apshare/tomcat202/w1-detector.sh" 20L, 430C written                                                             11,34         All
+done                                                11,34         All

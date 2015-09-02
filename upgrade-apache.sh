@@ -26,10 +26,4 @@ make install
 /apshare/ap/bin/apachectl -k graceful-stop
 /apshare/ap/bin/apachectl -k start
 
-echo "Finish!"
-~
-~
-~
-~
-~
-"upgrade_apache.sh" 25L, 517C                                                                                     1,1           All
+echo "Finish!"                                                                                  1,1           All
