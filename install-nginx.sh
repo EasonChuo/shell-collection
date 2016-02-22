@@ -1,9 +1,9 @@
 #!/bin/sh
 #安裝nginx指令包
 #2016.02.22 init by Eason
-yum update
+yum update -y
 yum install gcc* -y
-yum install pcre -y
+yum install pcre* -y
 
 mkdir /usr/src
 cd /usr/src
