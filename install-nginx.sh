@@ -39,6 +39,9 @@ cd nginx
 make
 make install
 useradd -r nginx
+#建立log目錄
+mkdir /etc/nginx/logs
+chown nginx:nginx /etc/nginx/logs/
 
 #下載服務設定檔
 cd /etc/init.d
