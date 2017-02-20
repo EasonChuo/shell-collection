@@ -9,10 +9,15 @@ mkdir /usr/src
 cd /usr/src
 
 #下載指定版本的nginx
-export nginxVersion="1.9.11" 
+export nginxVersion="1.10.3" 
 wget http://nginx.org/download/nginx-$nginxVersion.tar.gz 
 tar -xzf nginx-$nginxVersion.tar.gz 
 ln -sf nginx-$nginxVersion nginx
+
+#下載nginx-sticky-module，此版號為1.2.5
+wget https://bitbucket.org/nginx-goodies/nginx-sticky-module-ng/get/master.tar.gz
+tar -zxf master.tar.gz
+mv nginx-goodies-nginx-sticky-module-ng-c78b7dd79d0d nginx-sticky-module-ng
 
 #編譯nginx
 cd nginx 
@@ -35,7 +40,7 @@ cd nginx
  --without-http_scgi_module \
  --without-http_uwsgi_module \
  --without-http_fastcgi_module
-
+ --add-module=/usr/src/nginx-sticky-module-ng
 make
 make install
 useradd -r nginx
