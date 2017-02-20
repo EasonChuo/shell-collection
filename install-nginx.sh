@@ -51,5 +51,8 @@ chown nginx:nginx /etc/nginx/logs/
 #下載服務設定檔
 cd /etc/init.d
 wget -O /etc/init.d/nginx https://gist.github.com/sairam/5892520/raw/b8195a71e944d46271c8a49f2717f70bcd04bf1a/etc-init.d-nginx
- 
+
+#賦予service檔案執行權限
+chmod +x /etc/init.d/nginx
+
 echo "Finish!"
