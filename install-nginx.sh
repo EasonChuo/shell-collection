@@ -17,7 +17,7 @@ ln -sf nginx-$nginxVersion nginx
 #下載nginx-sticky-module，此版號為1.2.5
 wget https://bitbucket.org/nginx-goodies/nginx-sticky-module-ng/get/master.tar.gz
 tar -zxf master.tar.gz
-mv nginx-goodies-nginx-sticky-module-ng-c78b7dd79d0d nginx-sticky-module-ng
+mv nginx-goodies-nginx-sticky-module-ng-08a395c66e42 nginx-sticky-module-ng
 
 #編譯nginx
 cd nginx 
