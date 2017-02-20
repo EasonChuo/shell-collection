@@ -2,7 +2,7 @@
 #安裝nginx指令包
 #2016.02.22 init by Eason
 yum update -y
-yum install gcc* -y
+yum install gcc* openssl-deve -y
 yum install pcre* -y
 
 mkdir /usr/src
