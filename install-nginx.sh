@@ -39,7 +39,7 @@ cd nginx
  --with-http_realip_module \
  --without-http_scgi_module \
  --without-http_uwsgi_module \
- --without-http_fastcgi_module
+ --without-http_fastcgi_module \
  --add-module=/usr/src/nginx-sticky-module-ng
 make
 make install
