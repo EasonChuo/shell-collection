@@ -40,7 +40,7 @@ cd nginx
  --without-http_scgi_module \
  --without-http_uwsgi_module \
  --without-http_fastcgi_module \
- --add-module=/usr/src/nginx-sticky-module-ng
+ --add-module=/usr/src/nginx-sticky-module-ng \
  --with-ipv6
  
 make
