@@ -41,6 +41,8 @@ cd nginx
  --without-http_uwsgi_module \
  --without-http_fastcgi_module \
  --add-module=/usr/src/nginx-sticky-module-ng
+ --with-ipv6
+ 
 make
 make install
 useradd -r nginx
