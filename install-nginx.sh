@@ -57,4 +57,8 @@ wget -O /etc/init.d/nginx https://gist.github.com/sairam/5892520/raw/b8195a71e94
 #賦予service檔案執行權限
 chmod +x /etc/init.d/nginx
 
+#啟動時自動執行
+chkconfig --add nginx
+chkconfig nginx on
+
 echo "Finish!"
