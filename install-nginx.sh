@@ -19,8 +19,19 @@ wget https://bitbucket.org/nginx-goodies/nginx-sticky-module-ng/get/master.tar.g
 tar -zxf master.tar.gz
 mv nginx-goodies-nginx-sticky-module-ng-08a395c66e42 nginx-sticky-module-ng
 
+#下載nginx-module-vts
+git clone git://github.com/vozlt/nginx-module-vts.git
+#下載nginx_upstream_check_module
+git clone https://github.com/yaoweibin/nginx_upstream_check_module
+
+#更新nginx_upstream_check_module所需的patch
+cd /usr/src/nginx/nginx-sticky-module-ng
+patch -p0 < /usr/src/nginx_upstream_check_module/nginx-sticky-module.patch
+cd /usr/src/nginx
+patch -p1 < /usr/src/nginx_upstream_check_module/check_1.14.0+.patch
+
 #編譯nginx
-cd nginx 
+cd /usr/src/nginx 
 ./configure \
  --user=nginx \
  --group=nginx \
@@ -41,10 +52,10 @@ cd nginx
  --without-http_uwsgi_module \
  --without-http_fastcgi_module \
  --add-module=/usr/src/nginx-sticky-module-ng \
- --with-ipv6
+ --add-module=/usr/src/nginx-module-vts \
+ --add-module=/usr/src/nginx_upstream_check_module
  
-make
-make install
+make && make install
 useradd -r nginx
 #建立log目錄
 mkdir /etc/nginx/logs
