@@ -25,7 +25,7 @@ git clone https://github.com/vozlt/nginx-module-vts.git
 git clone https://github.com/yaoweibin/nginx_upstream_check_module
 
 #更新nginx_upstream_check_module所需的patch
-cd /usr/src/nginx/nginx-sticky-module-ng
+cd /usr/src/nginx-sticky-module-ng
 patch -p0 < /usr/src/nginx_upstream_check_module/nginx-sticky-module.patch
 cd /usr/src/nginx
 patch -p1 < /usr/src/nginx_upstream_check_module/check_1.14.0+.patch
