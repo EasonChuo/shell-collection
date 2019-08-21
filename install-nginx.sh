@@ -20,7 +20,7 @@ tar -zxf master.tar.gz
 mv nginx-goodies-nginx-sticky-module-ng-08a395c66e42 nginx-sticky-module-ng
 
 #下載nginx-module-vts
-git clone git://github.com/vozlt/nginx-module-vts.git
+git clone https://github.com/vozlt/nginx-module-vts.git
 #下載nginx_upstream_check_module
 git clone https://github.com/yaoweibin/nginx_upstream_check_module
 
