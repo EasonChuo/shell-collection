@@ -24,6 +24,13 @@ mv nginx-goodies-nginx-sticky-module-ng-08a395c66e42 nginx-sticky-module-ng
 git clone https://github.com/vozlt/nginx-module-vts.git
 #下載nginx_upstream_check_module
 git clone https://github.com/yaoweibin/nginx_upstream_check_module
+#下載ip2location
+git clone https://github.com/ip2location/ip2location-nginx
+#下載IP2Location原始碼給nginx編譯用
+git clone https://github.com/chrislim2888/IP2Location-C-Library
+rsync -av IP2Location-C-Library/libIP2Location/ ip2location-nginx/
+
+
 
 #更新nginx_upstream_check_module所需的patch
 cd /usr/src/nginx-sticky-module-ng
@@ -54,7 +61,8 @@ cd /usr/src/nginx
  --without-http_fastcgi_module \
  --add-module=/usr/src/nginx-sticky-module-ng \
  --add-module=/usr/src/nginx-module-vts \
- --add-module=/usr/src/nginx_upstream_check_module
+ --add-module=/usr/src/nginx_upstream_check_module \
+ --add-module=/usr/src/ip2location-nginx
  
 make && make install
 useradd -r nginx
