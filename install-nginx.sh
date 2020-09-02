@@ -26,11 +26,12 @@ git clone https://github.com/vozlt/nginx-module-vts.git
 git clone https://github.com/yaoweibin/nginx_upstream_check_module
 #下載ip2location
 git clone https://github.com/ip2location/ip2location-nginx
+#下載nginx_cookie_flag_module
+git clone https://github.com/AirisX/nginx_cookie_flag_module/
 #下載IP2Location原始碼給nginx編譯用
+#依實際需求引入IP2Location
 git clone https://github.com/chrislim2888/IP2Location-C-Library
 rsync -av IP2Location-C-Library/libIP2Location/ ip2location-nginx/
-
-
 
 #更新nginx_upstream_check_module所需的patch
 cd /usr/src/nginx-sticky-module-ng
@@ -62,6 +63,7 @@ cd /usr/src/nginx
  --add-module=/usr/src/nginx-sticky-module-ng \
  --add-module=/usr/src/nginx-module-vts \
  --add-module=/usr/src/nginx_upstream_check_module \
+ --add-module=/path/to/nginx_cookie_flag_module \
  --add-module=/usr/src/ip2location-nginx
  
 make && make install
