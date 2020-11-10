@@ -64,7 +64,7 @@ cd /usr/src/nginx
  --add-module=/usr/src/nginx-sticky-module-ng \
  --add-module=/usr/src/nginx-module-vts \
  --add-module=/usr/src/nginx_upstream_check_module \
- --add-module=/path/to/nginx_cookie_flag_module \
+ --add-module=/usr/src/nginx_cookie_flag_module \
  --add-module=/usr/src/ip2location-nginx
  
 make && make install
