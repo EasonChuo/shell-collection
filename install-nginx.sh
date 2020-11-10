@@ -5,6 +5,7 @@ yum update -y
 yum install gcc* openssl-devel -y
 yum install pcre* -y
 yum install patch -y
+yum install git -y
 
 mkdir /usr/src
 cd /usr/src
