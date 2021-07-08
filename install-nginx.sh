@@ -11,7 +11,7 @@ mkdir /usr/src
 cd /usr/src
 
 #下載指定版本的nginx
-export nginxVersion="1.17.5" 
+export nginxVersion="1.18.0" 
 wget http://nginx.org/download/nginx-$nginxVersion.tar.gz 
 tar -xzf nginx-$nginxVersion.tar.gz 
 ln -sf nginx-$nginxVersion nginx
