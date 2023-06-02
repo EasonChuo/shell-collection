@@ -30,7 +30,6 @@ git clone https://github.com/ip2location/ip2location-nginx
 #下載nginx_cookie_flag_module
 git clone https://github.com/AirisX/nginx_cookie_flag_module/
 #下載ngx_http_geoip2_module原始碼給nginx編譯用
-#依實際需求引入IP2Location
 git clone https://github.com/leev/ngx_http_geoip2_module.git
 
 #更新nginx_upstream_check_module所需的patch
@@ -69,8 +68,9 @@ cd /usr/src/nginx
 make && make install
 useradd -r nginx
 #建立log目錄
-mkdir /etc/nginx/logs
-chown nginx:nginx /etc/nginx/logs/
+mkdir /var/log/nginx
+chown nginx:nginx /var/log/nginx
+ln -s /var/log/nginx /etc/nginx/logs
 
 #下載服務設定檔
 cd /etc/init.d
